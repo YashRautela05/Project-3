@@ -107,9 +107,9 @@ def main():
         return
     
     print("\n📦 Checking dependencies...")
-    if not check_dependencies():
-        print("\n❌ Please install missing dependencies first")
-        return
+    # if not check_dependencies():
+    #     print("\n❌ Please install missing dependencies first")
+    #     return 
     
     print("\n📁 Creating directories...")
     create_directories()

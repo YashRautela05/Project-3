@@ -1,293 +1,189 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  AlertTriangle, 
+  Upload as UploadIcon, 
   Shield, 
-  CheckCircle, 
-  XCircle, 
-  HelpCircle,
-  ArrowLeft,
-  Download,
-  Share2,
+  AlertTriangle, 
+  Users, 
   Clock,
-  Phone,
-  Brain,
-  Mic,
-  Eye
+  TrendingUp
 } from 'lucide-react';
-import axios from 'axios';
 
-interface AnalysisResult {
-  status: string;
-  file_path: string;
-  transcription: string;
-  language: string;
-  visual_summary: {
-    detected_objects: string[];
-  };
-  video_caption: string;
-  crime_analysis: {
-    crime_analysis: string;
-    status: string;
-    method: string;
-  };
-  method: string;
-}
+const Dashboard: React.FC = () => {
+  const stats = [
+    { label: 'Videos Analyzed', value: '156', icon: Users, color: 'text-blue-600' },
+    { label: 'Crimes Detected', value: '23', icon: AlertTriangle, color: 'text-red-600' },
+    { label: 'Safety Alerts', value: '8', icon: Shield, color: 'text-green-600' },
+    { label: 'Processing Time', value: '45s', icon: Clock, color: 'text-purple-600' },
+  ];
 
-const Results: React.FC = () => {
-  const { taskId } = useParams<{ taskId: string }>();
-  const [result, setResult] = useState<AnalysisResult | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const features = [
+    {
+      title: 'AI-Powered Analysis',
+      description: 'Advanced machine learning models analyze audio and visual content for criminal activity detection.',
+      icon: TrendingUp,
+      color: 'bg-blue-500',
+    },
+    {
+      title: 'Real-time Processing',
+      description: 'Upload videos and get instant crime analysis with safety recommendations.',
+      icon: Clock,
+      color: 'bg-green-500',
+    },
+    {
+      title: 'Safety First',
+      description: 'Immediate safety alerts and emergency procedures for witnesses.',
+      icon: Shield,
+      color: 'bg-red-500',
+    },
+    {
+      title: 'Multi-modal Detection',
+      description: 'Combines audio transcription, object detection, and behavioral analysis.',
+      icon: Users,
+      color: 'bg-purple-500',
+    },
+  ];
 
-  const fetchResults = async () => {
-    try {
-      const response = await axios.get(`http://localhost:8000/status/${taskId}`);
-      const { status, result: analysisResult } = response.data;
-
-      if (status === 'SUCCESS') {
-        setResult(analysisResult);
-      } else if (status === 'FAILURE') {
-        setError('Analysis failed. Please try again.');
-      } else {
-        setError('Analysis is still in progress...');
-      }
-    } catch (error) {
-      console.error('Error fetching results:', error);
-      setError('Failed to load analysis results.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    if (taskId) {
-      fetchResults();
-    }
-  }, [taskId, fetchResults]);
-
-  const getCrimeStatus = () => {
-    if (!result?.crime_analysis?.crime_analysis) return 'unknown';
-    
-    const analysis = result.crime_analysis.crime_analysis.toLowerCase();
-    if (analysis.includes('criminal activity detected: yes')) return 'detected';
-    if (analysis.includes('criminal activity detected: no')) return 'safe';
-    return 'unknown';
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'detected':
-        return 'text-red-600 bg-red-100 border-red-300';
-      case 'safe':
-        return 'text-green-600 bg-green-100 border-green-300';
-      default:
-        return 'text-yellow-600 bg-yellow-100 border-yellow-300';
-    }
-  };
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'detected':
-        return <AlertTriangle className="h-6 w-6" />;
-      case 'safe':
-        return <CheckCircle className="h-6 w-6" />;
-      default:
-        return <Shield className="h-6 w-6" />;
-    }
-  };
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-64">
-        <div className="text-center">
-          <Clock className="h-12 w-12 text-primary-600 animate-spin mx-auto mb-4" />
-          <p className="text-gray-600">Loading analysis results...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="text-center">
-        <XCircle className="h-12 w-12 text-red-600 mx-auto mb-4" />
-        <h2 className="text-xl font-semibold text-gray-900 mb-2">Error</h2>
-        <p className="text-gray-600 mb-4">{error}</p>
-        <Link to="/upload" className="btn-primary">
-          Try Again
-        </Link>
-      </div>
-    );
-  }
-
-  if (!result) {
-    return (
-      <div className="text-center">
-        <p className="text-gray-600">No results found.</p>
-      </div>
-    );
-  }
-
-  const crimeStatus = getCrimeStatus();
+  const quickActions = [
+    {
+      title: 'Upload Video',
+      description: 'Analyze a video for criminal activity',
+      icon: UploadIcon,
+      link: '/upload',
+      color: 'bg-primary-600 hover:bg-primary-700',
+    },
+    {
+      title: 'Safety Tips',
+      description: 'Learn crime prevention strategies',
+      icon: Shield,
+      link: '#',
+      color: 'bg-green-600 hover:bg-green-700',
+    },
+    {
+      title: 'Emergency Contacts',
+      description: 'Quick access to emergency numbers',
+      icon: AlertTriangle,
+      link: '#',
+      color: 'bg-red-600 hover:bg-red-700',
+    },
+  ];
 
   return (
-    <div className="max-w-6xl mx-auto space-y-8">
-      {/* Header */}
+    <div className="space-y-8">
+      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="text-center"
       >
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Analysis Results</h1>
-        <p className="text-gray-600">
-          AI-powered crime detection analysis completed
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Crime-AI Detection System
+        </h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          Advanced AI-powered crime detection with real-time analysis and safety recommendations.
+          Protect your community with intelligent surveillance technology.
         </p>
       </motion.div>
 
-      {/* Crime Status Alert */}
+      {/* Stats */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className={`card border-2 ${getStatusColor(crimeStatus)}`}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
       >
-        <div className="flex items-center space-x-4">
-          {getStatusIcon(crimeStatus)}
-          <div>
-            <h2 className="text-xl font-semibold">
-              {crimeStatus === 'detected' ? 'Criminal Activity Detected' : 
-               crimeStatus === 'safe' ? 'No Criminal Activity Detected' : 
-               'Analysis Complete'}
-            </h2>
-            <p className="text-sm opacity-80">
-              {crimeStatus === 'detected' ? 'Immediate action recommended' :
-               crimeStatus === 'safe' ? 'No immediate safety concerns' :
-               'Review analysis details below'}
-            </p>
-          </div>
-        </div>
+        {stats.map((stat, index) => {
+          const Icon = stat.icon;
+          return (
+            <div key={index} className="card">
+              <div className="flex items-center space-x-3">
+                <Icon className={`h-8 w-8 ${stat.color}`} />
+                <div>
+                  <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+                  <p className="text-sm text-gray-600">{stat.label}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </motion.div>
 
-      {/* Emergency Actions */}
-      {crimeStatus === 'detected' && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="card bg-red-50 border-red-200"
-        >
-          <div className="flex items-start space-x-4">
-            <Phone className="h-6 w-6 text-red-600 mt-1" />
-            <div>
-              <h3 className="font-semibold text-red-800 mb-2">Emergency Actions Required</h3>
-              <div className="space-y-2 text-sm text-red-700">
-                <p>• Call 911 immediately if crime is in progress</p>
-                <p>• Do not approach or confront anyone involved</p>
-                <p>• Document details for law enforcement</p>
-                <p>• Stay at a safe distance</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      )}
-
-      {/* Analysis Details */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* AI Analysis */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="card"
-        >
-          <div className="flex items-center space-x-2 mb-4">
-            <Brain className="h-5 w-5 text-primary-600" />
-            <h3 className="text-lg font-semibold">AI Analysis</h3>
-          </div>
-          <div className="prose prose-sm max-w-none">
-            <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-4 rounded-lg overflow-auto">
-              {result.crime_analysis?.crime_analysis || 'No analysis available'}
-            </pre>
-          </div>
-        </motion.div>
-
-        {/* Technical Details */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="space-y-6"
-        >
-          {/* Audio Analysis */}
-          <div className="card">
-            <div className="flex items-center space-x-2 mb-4">
-              <Mic className="h-5 w-5 text-blue-600" />
-              <h3 className="text-lg font-semibold">Audio Analysis</h3>
-            </div>
-            <div className="space-y-2">
-              <p className="text-sm text-gray-600">
-                <span className="font-medium">Language:</span> {result.language || 'Not detected'}
-              </p>
-              <p className="text-sm text-gray-600">
-                <span className="font-medium">Transcription:</span>
-              </p>
-              <p className="text-sm bg-gray-50 p-3 rounded">
-                {result.transcription || 'No audio content detected'}
-              </p>
-            </div>
-          </div>
-
-          {/* Visual Analysis */}
-          <div className="card">
-            <div className="flex items-center space-x-2 mb-4">
-              <Eye className="h-5 w-5 text-green-600" />
-              <h3 className="text-lg font-semibold">Visual Analysis</h3>
-            </div>
-            <div className="space-y-2">
-              <p className="text-sm text-gray-600">
-                <span className="font-medium">Detected Objects:</span>
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {result.visual_summary?.detected_objects?.map((obj, index) => (
-                  <span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
-                    {obj}
-                  </span>
-                )) || <span className="text-gray-500">None detected</span>}
-              </div>
-              <p className="text-sm text-gray-600 mt-3">
-                <span className="font-medium">Video Caption:</span>
-              </p>
-              <p className="text-sm bg-gray-50 p-3 rounded">
-                {result.video_caption || 'No caption available'}
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Actions */}
+      {/* Quick Actions */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-        className="flex flex-wrap gap-4 justify-center"
+        transition={{ delay: 0.2 }}
+        className="grid grid-cols-1 md:grid-cols-3 gap-6"
       >
-        <Link to="/upload" className="btn-primary">
-          Analyze Another Video
+        {quickActions.map((action, index) => {
+          const Icon = action.icon;
+          return (
+            <Link
+              key={index}
+              to={action.link}
+              className="card hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1"
+            >
+              <div className="flex items-center space-x-4">
+                <div className={`p-3 rounded-lg ${action.color} text-white`}>
+                  <Icon className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">{action.title}</h3>
+                  <p className="text-sm text-gray-600">{action.description}</p>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+      </motion.div>
+
+      {/* Features */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        {features.map((feature, index) => {
+          const Icon = feature.icon;
+          return (
+            <div key={index} className="card">
+              <div className="flex items-start space-x-4">
+                <div className={`p-3 rounded-lg ${feature.color} text-white`}>
+                  <Icon className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </motion.div>
+
+      {/* CTA Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="card bg-gradient-to-r from-primary-600 to-primary-700 text-white text-center"
+      >
+        <h2 className="text-2xl font-bold mb-4">Ready to Analyze?</h2>
+        <p className="text-primary-100 mb-6">
+          Upload a video file and get instant AI-powered crime detection analysis.
+        </p>
+        <Link
+          to="/upload"
+          className="btn-secondary bg-white text-primary-700 hover:bg-gray-100"
+        >
+          <UploadIcon className="h-5 w-5 mr-2" />
+          Upload Video
         </Link>
-        <button className="btn-secondary">
-          <Download className="h-4 w-4 mr-2" />
-          Download Report
-        </button>
-        <button className="btn-secondary">
-          <Share2 className="h-4 w-4 mr-2" />
-          Share Results
-        </button>
       </motion.div>
     </div>
   );
 };
 
-export default Results;
+export default Dashboard;

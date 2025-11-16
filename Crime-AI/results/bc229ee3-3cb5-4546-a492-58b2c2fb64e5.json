@@ -1,0 +1,103 @@
+{
+  "summary": {
+    "job_id": "bc229ee3-3cb5-4546-a492-58b2c2fb64e5",
+    "frames_analyzed": 16,
+    "detections": [
+      {
+        "frame": "frame_00012.jpg",
+        "objects": [
+          {
+            "label": "person",
+            "conf": 0.5092837810516357,
+            "bbox": [
+              74.52019500732422,
+              1.505639672279358,
+              426.3692626953125,
+              310.4039001464844
+            ]
+          }
+        ]
+      },
+      {
+        "frame": "frame_00006.jpg",
+        "objects": [
+          {
+            "label": "person",
+            "conf": 0.9197696447372437,
+            "bbox": [
+              306.8724365234375,
+              48.5035400390625,
+              506.48046875,
+              343.66033935546875
+            ]
+          },
+          {
+            "label": "surfboard",
+            "conf": 0.5457401871681213,
+            "bbox": [
+              200.48159790039062,
+              331.7416687011719,
+              593.3465576171875,
+              386.4806823730469
+            ]
+          }
+        ]
+      },
+      {
+        "frame": "frame_00007.jpg",
+        "objects": [
+          {
+            "label": "person",
+            "conf": 0.8370729088783264,
+            "bbox": [
+              295.4198913574219,
+              47.50193405151367,
+              500.7010498046875,
+              251.4863739013672
+            ]
+          }
+        ]
+      },
+      {
+        "frame": "frame_00013.jpg",
+        "objects": [
+          {
+            "label": "person",
+            "conf": 0.7688301801681519,
+            "bbox": [
+              0.0,
+              25.13459587097168,
+              274.0584411621094,
+              207.9734649658203
+            ]
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "type": "possible_fight_or_assault",
+        "frame": "frame_00002.jpg",
+        "confidence": 0.5,
+        "details": {
+          "persons_involved": 2
+        }
+      }
+    ]
+  },
+  "gemini_output": {
+    "description": "Based on detected patterns, a possible snatching or weapon-related event seems to have occurred.",
+    "ipc_suggestions": [
+      {
+        "section": "392",
+        "reason": "Robbery (if snatching confirmed)"
+      },
+      {
+        "section": "324",
+        "reason": "Hurt with dangerous weapon (if weapon incident observed)"
+      }
+    ],
+    "punishment_estimate": "Up to 3\u20137 years depending on incident type.",
+    "disclaimer": "This is automated pattern analysis, not legal advice."
+  }
+}

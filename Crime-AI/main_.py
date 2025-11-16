@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from fastapi import UploadFile, File, HTTPException
 import os
 from datetime import datetime
-from tasks import process_media_task
-from tasks import celery_app
+from tasks_ import process_media_task
+from tasks_ import celery_app
 from config import UPLOAD_DIR, MAX_FILE_SIZE, ALLOWED_EXTENSIONS
 
 app = FastAPI(title="Crime-AI API", description="AI-powered media analysis for crime detection")

@@ -1,0 +1,928 @@
+{
+  "summary": {
+    "video_hash": "c78c5b9aac75a4a15185687f82fa4f7e503531a45e4a9de9a8fbe619fa639593",
+    "frames_analyzed": 47,
+    "frames_per_second": 2,
+    "detections_summary": {
+      "total_frames": 47,
+      "unique_objects": [
+        "skateboard",
+        "handbag",
+        "person",
+        "cell phone",
+        "baseball glove",
+        "bottle",
+        "pizza"
+      ],
+      "sample_detections": [
+        {
+          "frame": "frame_00000.jpg",
+          "frame_index": 0,
+          "objects": [
+            {
+              "label": "person",
+              "conf": 0.8210577368736267,
+              "bbox": [
+                354.71484375,
+                547.159423828125,
+                431.6712951660156,
+                662.0720825195312
+              ],
+              "bbox_area": 8843.27043567039,
+              "class_id": 0
+            },
+            {
+              "label": "person",
+              "conf": 0.7687376141548157,
+              "bbox": [
+                323.8851013183594,
+                0.17889404296875,
+                417.7395324707031,
+                119.03933715820312
+              ],
+              "bbox_area": 11155.579275095835,
+              "class_id": 0
+            },
+            {
+              "label": "handbag",
+              "conf": 0.6619109511375427,
+              "bbox": [
+                314.4874572753906,
+                8.075106620788574,
+                347.2215881347656,
+                68.93343353271484
+              ],
+              "bbox_area": 1992.1444370176177,
+              "class_id": 26
+            },
+            {
+              "label": "person",
+              "conf": 0.49006539583206177,
+              "bbox": [
+                184.21006774902344,
+                292.3976745605469,
+                377.3466796875,
+                496.9638671875
+              ],
+              "bbox_area": 39509.22136112349,
+              "class_id": 0
+            },
+            {
+              "label": "handbag",
+              "conf": 0.45401665568351746,
+              "bbox": [
+                390.9352111816406,
+                0.002368927001953125,
+                419.0950622558594,
+                12.63180923461914
+              ],
+              "bbox_area": 355.64315821323544,
+              "class_id": 26
+            }
+          ],
+          "unique_labels": [
+            "person",
+            "handbag"
+          ],
+          "object_persistence": {
+            "person": {
+              "frame_count": 73,
+              "persistence_ratio": 1.553191489361702
+            },
+            "handbag": {
+              "frame_count": 5,
+              "persistence_ratio": 0.10638297872340426
+            },
+            "cell phone": {
+              "frame_count": 6,
+              "persistence_ratio": 0.1276595744680851
+            },
+            "car": {
+              "frame_count": 3,
+              "persistence_ratio": 0.06382978723404255
+            },
+            "umbrella": {
+              "frame_count": 2,
+              "persistence_ratio": 0.0425531914893617
+            },
+            "bottle": {
+              "frame_count": 2,
+              "persistence_ratio": 0.0425531914893617
+            },
+            "pizza": {
+              "frame_count": 2,
+              "persistence_ratio": 0.0425531914893617
+            }
+          }
+        },
+        {
+          "frame": "frame_00001.jpg",
+          "frame_index": 1,
+          "objects": [
+            {
+              "label": "person",
+              "conf": 0.8994680643081665,
+              "bbox": [
+                324.6620788574219,
+                0.3495025634765625,
+                431.44677734375,
+                140.2068634033203
+              ],
+              "bbox_area": 14934.62610837631,
+              "class_id": 0
+            },
+            {
+              "label": "person",
+              "conf": 0.8693345189094543,
+              "bbox": [
+                343.84368896484375,
+                581.1387329101562,
+                431.5392761230469,
+                767.4869995117188
+              ],
+              "bbox_area": 16341.920655537397,
+              "class_id": 0
+            },
+            {
+              "label": "handbag",
+              "conf": 0.6217586398124695,
+              "bbox": [
+                321.4536437988281,
+                34.38220977783203,
+                362.1789245605469,
+                105.91754150390625
+              ],
+              "bbox_area": 2913.2964689270593,
+              "class_id": 26
+            },
+            {
+              "label": "person",
+              "conf": 0.3101395070552826,
+              "bbox": [
+                184.26617431640625,
+                292.8050231933594,
+                376.6634216308594,
+                497.5044860839844
+              ],
+              "bbox_area": 39383.6131869033,
+              "class_id": 0
+            }
+          ],
+          "unique_labels": [
+            "person",
+            "handbag"
+          ]
+        },
+        {
+          "frame": "frame_00002.jpg",
+          "frame_index": 2,
+          "objects": [
+            {
+              "label": "person",
+              "conf": 0.899888813495636,
+              "bbox": [
+                332.2522888183594,
+                622.1663208007812,
+                431.3431091308594,
+                767.6408081054688
+              ],
+              "bbox_area": 14415.186281561852,
+              "class_id": 0
+            },
+            {
+              "label": "person",
+              "conf": 0.8525104522705078,
+              "bbox": [
+                331.4862365722656,
+                0.2999267578125,
+                431.568603515625,
+                218.98345947265625
+              ],
+              "bbox_area": 21886.365565637127,
+              "class_id": 0
+            },
+            {
+              "label": "person",
+              "conf": 0.38291841745376587,
+              "bbox": [
+                184.17938232421875,
+                293.6415710449219,
+                376.8128356933594,
+                497.9869689941406
+              ],
+              "bbox_area": 39363.759687049314,
+              "class_id": 0
+            },
+            {
+              "label": "cell phone",
+              "conf": 0.18789860606193542,
+              "bbox": [
+                183.6616973876953,
+                392.7813720703125,
+                198.66590881347656,
+                415.3872985839844
+              ],
+              "bbox_area": 339.18410088680685,
+              "class_id": 67
+            }
+          ],
+          "unique_labels": [
+            "person",
+            "cell phone"
+          ]
+        },
+        {
+          "frame": "frame_00003.jpg",
+          "frame_index": 3,
+          "objects": [
+            {
+              "label": "person",
+              "conf": 0.8870691061019897,
+              "bbox": [
+                337.9614562988281,
+                40.98191452026367,
+                431.61553955078125,
+                256.55419921875
+              ],
+              "bbox_area": 20189.22469796578,
+              "class_id": 0
+            },
+            {
+              "label": "person",
+              "conf": 0.7220867872238159,
+              "bbox": [
+                184.42236328125,
+                294.2549743652344,
+                379.8151550292969,
+                498.0071105957031
+              ],
+              "bbox_area": 39811.69872269966,
+              "class_id": 0
+            },
+            {
+              "label": "person",
+              "conf": 0.5115060806274414,
+              "bbox": [
+                316.4302062988281,
+                689.0869750976562,
+                402.73748779296875,
+                767.6928100585938
+              ],
+              "bbox_area": 6784.255925055593,
+              "class_id": 0
+            },
+            {
+              "label": "cell phone",
+              "conf": 0.2899896800518036,
+              "bbox": [
+                183.77809143066406,
+                392.4570617675781,
+                199.16180419921875,
+                414.968505859375
+              ],
+              "bbox_area": 346.30958991358057,
+              "class_id": 67
+            },
+            {
+              "label": "skateboard",
+              "conf": 0.22737133502960205,
+              "bbox": [
+                338.7240905761719,
+                119.85912322998047,
+                379.02386474609375,
+                196.6466064453125
+              ],
+              "bbox_area": 3094.5182326545473,
+              "class_id": 36
+            }
+          ],
+          "unique_labels": [
+            "skateboard",
+            "person",
+            "cell phone"
+          ]
+        }
+      ]
+    },
+    "actions_summary": {
+      "total_clips": 1,
+      "clips": [
+        {
+          "clip_index": 0,
+          "clip_type": "middle",
+          "clip_position": 0.5,
+          "frame_range": {
+            "start": 0,
+            "end": 47,
+            "total_frames": 47
+          },
+          "num_frames_analyzed": 47,
+          "top_actions": [
+            {
+              "label": "delivering mail",
+              "prob": 0.2320679873228073,
+              "index": 135,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "bobsledding",
+              "prob": 0.17255765199661255,
+              "index": 39,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "pumping gas",
+              "prob": 0.050926774740219116,
+              "index": 389,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "bowling",
+              "prob": 0.04039730876684189,
+              "index": 45,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "hopscotch",
+              "prob": 0.03929520025849342,
+              "index": 217,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "parkour",
+              "prob": 0.030062131583690643,
+              "index": 307,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "ice climbing",
+              "prob": 0.029331428930163383,
+              "index": 225,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "luge",
+              "prob": 0.02760094404220581,
+              "index": 266,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "rock climbing",
+              "prob": 0.02524862065911293,
+              "index": 422,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "climbing ladder",
+              "prob": 0.019905179738998413,
+              "index": 101,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "skateboarding",
+              "prob": 0.014533665031194687,
+              "index": 463,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "changing wheel (not on bike)",
+              "prob": 0.007093297783285379,
+              "index": 82,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "faceplanting",
+              "prob": 0.0066886888816952705,
+              "index": 171,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "feeding birds",
+              "prob": 0.006536706350743771,
+              "index": 174,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "kicking soccer ball",
+              "prob": 0.00586424907669425,
+              "index": 246,
+              "is_crime_relevant": true,
+              "confidence_boost": true
+            },
+            {
+              "label": "pushing car",
+              "prob": 0.005539471749216318,
+              "index": 393,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "opening door",
+              "prob": 0.005326882936060429,
+              "index": 300,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "using atm",
+              "prob": 0.005198456346988678,
+              "index": 558,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "laying stone",
+              "prob": 0.005089074373245239,
+              "index": 256,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "checking tires",
+              "prob": 0.005017777439206839,
+              "index": 83,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            }
+          ],
+          "highest_confidence": 0.2320679873228073
+        }
+      ]
+    },
+    "motion_analysis": {
+      "analyzed": true,
+      "average_motion": 6.459267436594202,
+      "max_motion": 21.5625,
+      "motion_variance": 34.77778409233967,
+      "motion_pattern": {
+        "category": "low_activity",
+        "description": "Low motion (static scene or loitering)",
+        "crime_relevance": "low",
+        "confidence": 0.4
+      },
+      "sudden_movements": [],
+      "chase_sequences": [],
+      "frames_analyzed": 46
+    },
+    "events": [
+      {
+        "type": "valuable_items_with_multiple_persons",
+        "frame": "frame_00000.jpg",
+        "frame_index": 0,
+        "confidence": 0.6,
+        "severity": "medium",
+        "source": "object_detection",
+        "details": {
+          "valuable_labels": [
+            "handbag"
+          ],
+          "persons_count": 3,
+          "items_count": 2
+        }
+      },
+      {
+        "type": "crowd_activity",
+        "frame": "frame_00000.jpg",
+        "frame_index": 0,
+        "confidence": 0.55,
+        "severity": "low",
+        "source": "object_detection",
+        "details": {
+          "persons_visible": 3
+        }
+      },
+      {
+        "type": "valuable_items_with_multiple_persons",
+        "frame": "frame_00001.jpg",
+        "frame_index": 1,
+        "confidence": 0.6,
+        "severity": "medium",
+        "source": "object_detection",
+        "details": {
+          "valuable_labels": [
+            "handbag"
+          ],
+          "persons_count": 3,
+          "items_count": 1
+        }
+      },
+      {
+        "type": "crowd_activity",
+        "frame": "frame_00001.jpg",
+        "frame_index": 1,
+        "confidence": 0.55,
+        "severity": "low",
+        "source": "object_detection",
+        "details": {
+          "persons_visible": 3
+        }
+      },
+      {
+        "type": "valuable_items_with_multiple_persons",
+        "frame": "frame_00002.jpg",
+        "frame_index": 2,
+        "confidence": 0.6,
+        "severity": "medium",
+        "source": "object_detection",
+        "details": {
+          "valuable_labels": [
+            "cell phone"
+          ],
+          "persons_count": 3,
+          "items_count": 1
+        }
+      },
+      {
+        "type": "crowd_activity",
+        "frame": "frame_00002.jpg",
+        "frame_index": 2,
+        "confidence": 0.55,
+        "severity": "low",
+        "source": "object_detection",
+        "details": {
+          "persons_visible": 3
+        }
+      },
+      {
+        "type": "valuable_items_with_multiple_persons",
+        "frame": "frame_00003.jpg",
+        "frame_index": 3,
+        "confidence": 0.6,
+        "severity": "medium",
+        "source": "object_detection",
+        "details": {
+          "valuable_labels": [
+            "cell phone"
+          ],
+          "persons_count": 3,
+          "items_count": 1
+        }
+      },
+      {
+        "type": "crowd_activity",
+        "frame": "frame_00003.jpg",
+        "frame_index": 3,
+        "confidence": 0.55,
+        "severity": "low",
+        "source": "object_detection",
+        "details": {
+          "persons_visible": 3
+        }
+      },
+      {
+        "type": "crowd_activity",
+        "frame": "frame_00004.jpg",
+        "frame_index": 4,
+        "confidence": 0.55,
+        "severity": "low",
+        "source": "object_detection",
+        "details": {
+          "persons_visible": 3
+        }
+      },
+      {
+        "type": "crowd_activity",
+        "frame": "frame_00031.jpg",
+        "frame_index": 31,
+        "confidence": 0.55,
+        "severity": "low",
+        "source": "object_detection",
+        "details": {
+          "persons_visible": 3
+        }
+      },
+      {
+        "type": "crowd_activity",
+        "frame": "frame_00032.jpg",
+        "frame_index": 32,
+        "confidence": 0.55,
+        "severity": "low",
+        "source": "object_detection",
+        "details": {
+          "persons_visible": 3
+        }
+      },
+      {
+        "type": "valuable_items_with_multiple_persons",
+        "frame": "frame_00035.jpg",
+        "frame_index": 35,
+        "confidence": 0.6,
+        "severity": "medium",
+        "source": "object_detection",
+        "details": {
+          "valuable_labels": [
+            "cell phone"
+          ],
+          "persons_count": 3,
+          "items_count": 1
+        }
+      },
+      {
+        "type": "crowd_activity",
+        "frame": "frame_00035.jpg",
+        "frame_index": 35,
+        "confidence": 0.55,
+        "severity": "low",
+        "source": "object_detection",
+        "details": {
+          "persons_visible": 3
+        }
+      },
+      {
+        "type": "crowd_activity",
+        "frame": "frame_00038.jpg",
+        "frame_index": 38,
+        "confidence": 0.55,
+        "severity": "low",
+        "source": "object_detection",
+        "details": {
+          "persons_visible": 3
+        }
+      },
+      {
+        "type": "valuable_items_with_multiple_persons",
+        "frame": "frame_00040.jpg",
+        "frame_index": 40,
+        "confidence": 0.6,
+        "severity": "medium",
+        "source": "object_detection",
+        "details": {
+          "valuable_labels": [
+            "handbag"
+          ],
+          "persons_count": 2,
+          "items_count": 1
+        }
+      },
+      {
+        "type": "valuable_items_with_multiple_persons",
+        "frame": "frame_00041.jpg",
+        "frame_index": 41,
+        "confidence": 0.6,
+        "severity": "medium",
+        "source": "object_detection",
+        "details": {
+          "valuable_labels": [
+            "handbag"
+          ],
+          "persons_count": 2,
+          "items_count": 1
+        }
+      },
+      {
+        "type": "possible_assault_or_fight",
+        "source": "action_recognition",
+        "confidence": 0.00586424907669425,
+        "severity": "high",
+        "details": {
+          "label": "kicking soccer ball",
+          "prob": 0.00586424907669425,
+          "clip_index": 0,
+          "clip_type": "middle",
+          "is_crime_relevant": true
+        }
+      }
+    ],
+    "crime_report": {
+      "overall_severity": "critical",
+      "crime_detected": true,
+      "crime_indicators": [
+        {
+          "type": "weapon_threat",
+          "severity": "critical",
+          "confidence": 0.9
+        }
+      ],
+      "weapon_threat_analysis": {
+        "detected": true,
+        "threat_level": "critical",
+        "weapon_frames": [
+          {
+            "frame_index": 20,
+            "frame_name": "frame_00020.jpg",
+            "weapon_count": 1,
+            "person_count": 1,
+            "weapons": [
+              {
+                "type": "bottle",
+                "confidence": 0.1910298466682434
+              }
+            ]
+          },
+          {
+            "frame_index": 27,
+            "frame_name": "frame_00027.jpg",
+            "weapon_count": 1,
+            "person_count": 1,
+            "weapons": [
+              {
+                "type": "bottle",
+                "confidence": 0.10927169770002365
+              }
+            ]
+          }
+        ],
+        "proximity_alerts": [
+          {
+            "frame_index": 20,
+            "distance": 63.228400759969624,
+            "weapon_type": "bottle"
+          }
+        ],
+        "weapon_actions": [],
+        "assessment": "CRITICAL: Weapon detected in close proximity to persons. Immediate threat to safety."
+      },
+      "violence_analysis": {
+        "detected": true,
+        "violence_score": 0.15375988893518028,
+        "intensity_level": "moderate",
+        "violent_actions": [
+          {
+            "action": "kicking soccer ball",
+            "confidence": 0.00586424907669425,
+            "intensity": 0.008796373615041375,
+            "clip_index": 0,
+            "clip_type": "middle"
+          }
+        ],
+        "multi_person_frame_ratio": 0.44680851063829785,
+        "assessment": "Low or no violence detected."
+      },
+      "theft_analysis": {
+        "detected": false,
+        "theft_probability": 0.0,
+        "valuable_disappearances": [],
+        "theft_actions": [],
+        "assessment": "Low theft risk."
+      },
+      "suspicious_behavior_analysis": {
+        "detected": true,
+        "suspicion_score": 0.25,
+        "patterns": [
+          {
+            "type": "possible_loitering",
+            "confidence": 0.7,
+            "details": "Person present in 91.5% of frames"
+          }
+        ],
+        "assessment": "Suspicious activity detected: possible_loitering"
+      },
+      "recommendation": "\u26a0\ufe0f CRITICAL ALERT: Immediate danger detected. Call emergency services (911/112) immediately. Do NOT intervene directly. Evacuate to safe location."
+    }
+  },
+  "gemini_output": {
+    "description": "Automated analysis has detected potential criminal activity with critical severity. 1 crime indicators were identified through multi-modal AI analysis. This includes object detection, action recognition, and behavioral pattern analysis.",
+    "crime_detected": true,
+    "crime_type": "weapon_threat",
+    "severity": "critical",
+    "evidence": [
+      "Weapon detected in video",
+      "Violent actions detected with moderate intensity"
+    ],
+    "safety_recommendations": [
+      "\u26a0\ufe0f IMMEDIATE ACTION REQUIRED",
+      "Call emergency services (911/112) immediately",
+      "Do NOT intervene directly - maintain safe distance",
+      "Evacuate to a secure location if nearby",
+      "Preserve any evidence and provide video to authorities"
+    ],
+    "ipc_suggestions": [
+      {
+        "section": "IPC 307",
+        "reason": "Attempt to murder (if weapon used against person)"
+      },
+      {
+        "section": "IPC 506",
+        "reason": "Criminal intimidation with weapon"
+      }
+    ],
+    "disclaimer": "This analysis is generated by automated AI systems (YOLOv8x, MoViNet A2, and specialized crime pattern analyzers). While these systems are highly accurate, this is not definitive proof of criminal activity and should not replace human judgment or legal proceedings. Always consult law enforcement and legal professionals for official assessments."
+  },
+  "crime_analysis": {
+    "severity": "critical",
+    "crime_detected": true,
+    "indicators": [
+      {
+        "type": "weapon_threat",
+        "severity": "critical",
+        "confidence": 0.9
+      }
+    ],
+    "recommendation": "\u26a0\ufe0f CRITICAL ALERT: Immediate danger detected. Call emergency services (911/112) immediately. Do NOT intervene directly. Evacuate to safe location.",
+    "detailed_analyses": {
+      "weapon_threat": {
+        "detected": true,
+        "threat_level": "critical",
+        "weapon_frames": [
+          {
+            "frame_index": 20,
+            "frame_name": "frame_00020.jpg",
+            "weapon_count": 1,
+            "person_count": 1,
+            "weapons": [
+              {
+                "type": "bottle",
+                "confidence": 0.1910298466682434
+              }
+            ]
+          },
+          {
+            "frame_index": 27,
+            "frame_name": "frame_00027.jpg",
+            "weapon_count": 1,
+            "person_count": 1,
+            "weapons": [
+              {
+                "type": "bottle",
+                "confidence": 0.10927169770002365
+              }
+            ]
+          }
+        ],
+        "proximity_alerts": [
+          {
+            "frame_index": 20,
+            "distance": 63.228400759969624,
+            "weapon_type": "bottle"
+          }
+        ],
+        "weapon_actions": [],
+        "assessment": "CRITICAL: Weapon detected in close proximity to persons. Immediate threat to safety."
+      },
+      "violence": {
+        "detected": true,
+        "violence_score": 0.15375988893518028,
+        "intensity_level": "moderate",
+        "violent_actions": [
+          {
+            "action": "kicking soccer ball",
+            "confidence": 0.00586424907669425,
+            "intensity": 0.008796373615041375,
+            "clip_index": 0,
+            "clip_type": "middle"
+          }
+        ],
+        "multi_person_frame_ratio": 0.44680851063829785,
+        "assessment": "Low or no violence detected."
+      },
+      "theft": {
+        "detected": false,
+        "theft_probability": 0.0,
+        "valuable_disappearances": [],
+        "theft_actions": [],
+        "assessment": "Low theft risk."
+      },
+      "suspicious_behavior": {
+        "detected": true,
+        "suspicion_score": 0.25,
+        "patterns": [
+          {
+            "type": "possible_loitering",
+            "confidence": 0.7,
+            "details": "Person present in 91.5% of frames"
+          }
+        ],
+        "assessment": "Suspicious activity detected: possible_loitering"
+      },
+      "motion_patterns": {
+        "analyzed": true,
+        "average_motion": 6.459267436594202,
+        "max_motion": 21.5625,
+        "motion_variance": 34.77778409233967,
+        "motion_pattern": {
+          "category": "low_activity",
+          "description": "Low motion (static scene or loitering)",
+          "crime_relevance": "low",
+          "confidence": 0.4
+        },
+        "sudden_movements": [],
+        "chase_sequences": [],
+        "frames_analyzed": 46
+      }
+    }
+  },
+  "metadata": {
+    "analysis_version": "2.0_enhanced",
+    "models_used": [
+      "YOLOv8x",
+      "MoViNet-A2",
+      "CrimePatternAnalyzer",
+      "MotionAnalyzer"
+    ],
+    "fps": 3
+  }
+}
