@@ -1,6 +1,7 @@
 version: "3.9"
 
 services:
+
   redis:
     image: redis:7-alpine
     container_name: crime_ai_redis
@@ -15,15 +16,17 @@ services:
     env_file:
       - .env
     environment:
-      - HOST=0.0.0.0
-      - PORT=8000
+      HOST: 0.0.0.0
+      PORT: 8000
     volumes:
       - ./uploads:/app/uploads
+      - ./results:/app/results
+      - ./frames:/app/frames
     ports:
       - "8000:8000"
     depends_on:
       - redis
-    command: uvicorn backend.main:app --host 0.0.0.0 --port 8000
+    command: uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
 
   worker:
     build:
@@ -32,11 +35,16 @@ services:
     container_name: crime_ai_worker
     env_file:
       - .env
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
     depends_on:
       - redis
     volumes:
       - ./uploads:/app/uploads
-    command: celery -A backend.tasks worker --loglevel=info --pool=solo
+      - ./results:/app/results
+      - ./frames:/app/frames
+    command: celery -A backend.celery_worker.celery_app worker --loglevel=info --pool=solo
 
   frontend:
     build:

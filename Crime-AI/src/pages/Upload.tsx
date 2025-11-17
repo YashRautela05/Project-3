@@ -119,7 +119,7 @@ const Upload: React.FC = () => {
         const response = await axios.get(`http://localhost:8000/status/${taskId}`);
         const { status, result } = response.data;
 
-        if (status === 'SUCCESS') {
+        if (status === 'done') {
           setUploadStatus({
             taskId,
             status: 'completed',
@@ -128,10 +128,10 @@ const Upload: React.FC = () => {
           });
           toast.success('Analysis completed successfully!');
           
-          // Navigate to results after a short delay
+          // Navigate to results page after a short delay
           setTimeout(() => {
             navigate(`/results/${taskId}`);
-          }, 2000);
+          }, 1500);
           
           return;
         } else if (status === 'FAILURE') {

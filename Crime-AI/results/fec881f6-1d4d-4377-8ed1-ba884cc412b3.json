@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "job_id": "fec881f6-1d4d-4377-8ed1-ba884cc412b3",
+    "frames_analyzed": 16,
+    "detections": [
+      {
+        "frame": "frame_00001.jpg",
+        "objects": [
+          {
+            "label": "person",
+            "conf": 0.8101496696472168,
+            "bbox": [
+              292.7245178222656,
+              54.16399002075195,
+              497.20672607421875,
+              251.0772705078125
+            ]
+          },
+          {
+            "label": "person",
+            "conf": 0.7829699516296387,
+            "bbox": [
+              0.261209100484848,
+              0.655535876750946,
+              140.1386260986328,
+              110.80990600585938
+            ]
+          },
+          {
+            "label": "person",
+            "conf": 0.4287917912006378,
+            "bbox": [
+              563.39794921875,
+              0.0,
+              767.70263671875,
+              89.88252258300781
+            ]
+          }
+        ]
+      },
+      {
+        "frame": "frame_00002.jpg",
+        "objects": [
+          {
+            "label": "person",
+            "conf": 0.5190961360931396,
+            "bbox": [
+              294.07073974609375,
+              49.65458679199219,
+              499.2318115234375,
+              249.5750732421875
+            ]
+          },
+          {
+            "label": "person",
+            "conf": 0.3194461166858673,
+            "bbox": [
+              696.3089599609375,
+              52.969207763671875,
+              767.8369750976562,
+              135.6141357421875
+            ]
+          },
+          {
+            "label": "person",
+            "conf": 0.29702627658843994,
+            "bbox": [
+              146.9668731689453,
+              1.0775116682052612,
+              296.966796875,
+              59.57341003417969
+            ]
+          },
+          {
+            "label": "person",
+            "conf": 0.2523232400417328,
+            "bbox": [
+              177.97677612304688,
+              29.440576553344727,
+              498.9896545410156,
+              250.03927612304688
+            ]
+          }
+        ]
+      },
+      {
+        "frame": "frame_00003.jpg",
+        "objects": [
+          {
+            "label": "person",
+            "conf": 0.7651122212409973,
+            "bbox": [
+              306.4779052734375,
+              46.58305740356445,
+              511.583740234375,
+              254.24978637695312
+            ]
+          },
+          {
+            "label": "person",
+            "conf": 0.617983341217041,
+            "bbox": [
+              455.36285400390625,
+              0.6701980829238892,
+              583.110595703125,
+              140.14871215820312
+            ]
+          }
+        ]
+      },
+      {
+        "frame": "frame_00004.jpg",
+        "objects": [
+          {
+            "label": "person",
+            "conf": 0.9256744384765625,
+            "bbox": [
+              309.24713134765625,
+              43.20736312866211,
+              509.3493347167969,
+              343.71966552734375
+            ]
+          },
+          {
+            "label": "person",
+            "conf": 0.7703406810760498,
+            "bbox": [
+              609.4027099609375,
+              59.503108978271484,
+              767.5104370117188,
+              201.68505859375
+            ]
+          },
+          {
+            "label": "surfboard",
+            "conf": 0.443185031414032,
+            "bbox": [
+              199.21734619140625,
+              332.2078857421875,
+              599.622314453125,
+              386.6983337402344
+            ]
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "clip_index": 0,
+        "num_frames": 16,
+        "top_actions": [
+          {
+            "label": "tagging graffiti",
+            "prob": 0.15068544447422028,
+            "index": 514
+          },
+          {
+            "label": "laying stone",
+            "prob": 0.1242893636226654,
+            "index": 256
+          },
+          {
+            "label": "plastering",
+            "prob": 0.11108273267745972,
+            "index": 324
+          },
+          {
+            "label": "cleaning pool",
+            "prob": 0.10331235080957413,
+            "index": 96
+          },
+          {
+            "label": "spray painting",
+            "prob": 0.06442051380872726,
+            "index": 489
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "type": "crowd_activity",
+        "frame": "frame_00002.jpg",
+        "confidence": 0.4,
+        "source": "object_detection",
+        "details": {
+          "persons_visible": 4
+        }
+      }
+    ]
+  },
+  "gemini_output": {
+    "description": "Based on detected patterns, a possible snatching or weapon-related event seems to have occurred.",
+    "ipc_suggestions": [
+      {
+        "section": "392",
+        "reason": "Robbery (if snatching confirmed)"
+      },
+      {
+        "section": "324",
+        "reason": "Hurt with dangerous weapon (if weapon incident observed)"
+      }
+    ],
+    "punishment_estimate": "Up to 3\u20137 years depending on incident type.",
+    "disclaimer": "This is automated pattern analysis, not legal advice."
+  }
+}

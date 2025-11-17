@@ -1,0 +1,989 @@
+{
+  "summary": {
+    "video_hash": "db840f32e472604359821f2565dc87b7f61b7b30e28238f46e9d168aba4e9968",
+    "frames_analyzed": 43,
+    "frames_per_second": 2,
+    "detections_summary": {
+      "total_frames": 43,
+      "unique_objects": [
+        "cell phone",
+        "bottle",
+        "keyboard",
+        "remote",
+        "cup",
+        "umbrella",
+        "book",
+        "tv",
+        "toaster",
+        "scissors",
+        "suitcase"
+      ],
+      "sample_detections": [
+        {
+          "frame": "frame_00000.jpg",
+          "frame_index": 0,
+          "objects": [
+            {
+              "label": "suitcase",
+              "conf": 0.9780890345573425,
+              "bbox": [
+                0.8594970703125,
+                1141.774658203125,
+                2160.0,
+                3185.401611328125
+              ],
+              "bbox_area": 4412477.727370977,
+              "class_id": 28
+            },
+            {
+              "label": "book",
+              "conf": 0.19694456458091736,
+              "bbox": [
+                500.9270324707031,
+                2490.482177734375,
+                848.2041015625,
+                2745.743408203125
+              ],
+              "bbox_area": 88646.37196995318,
+              "class_id": 73
+            },
+            {
+              "label": "book",
+              "conf": 0.19571639597415924,
+              "bbox": [
+                1689.0787353515625,
+                2423.072998046875,
+                2140.043212890625,
+                2699.193115234375
+              ],
+              "bbox_area": 124520.36438548565,
+              "class_id": 73
+            }
+          ],
+          "unique_labels": [
+            "book",
+            "suitcase"
+          ],
+          "object_persistence": {
+            "suitcase": {
+              "frame_count": 10,
+              "persistence_ratio": 0.23255813953488372
+            },
+            "book": {
+              "frame_count": 129,
+              "persistence_ratio": 3.0
+            },
+            "tv": {
+              "frame_count": 4,
+              "persistence_ratio": 0.09302325581395349
+            },
+            "laptop": {
+              "frame_count": 2,
+              "persistence_ratio": 0.046511627906976744
+            },
+            "toaster": {
+              "frame_count": 3,
+              "persistence_ratio": 0.06976744186046512
+            },
+            "cup": {
+              "frame_count": 25,
+              "persistence_ratio": 0.5813953488372093
+            },
+            "keyboard": {
+              "frame_count": 28,
+              "persistence_ratio": 0.6511627906976745
+            },
+            "cell phone": {
+              "frame_count": 3,
+              "persistence_ratio": 0.06976744186046512
+            },
+            "dining table": {
+              "frame_count": 6,
+              "persistence_ratio": 0.13953488372093023
+            },
+            "remote": {
+              "frame_count": 3,
+              "persistence_ratio": 0.06976744186046512
+            },
+            "bottle": {
+              "frame_count": 2,
+              "persistence_ratio": 0.046511627906976744
+            }
+          }
+        },
+        {
+          "frame": "frame_00001.jpg",
+          "frame_index": 1,
+          "objects": [
+            {
+              "label": "suitcase",
+              "conf": 0.826471745967865,
+              "bbox": [
+                5.10845947265625,
+                1160.843994140625,
+                2159.233154296875,
+                3125.923095703125
+              ],
+              "bbox_area": 4233025.41995877,
+              "class_id": 28
+            },
+            {
+              "label": "book",
+              "conf": 0.3554491698741913,
+              "bbox": [
+                1808.80810546875,
+                2403.54248046875,
+                2158.563720703125,
+                2669.73388671875
+              ],
+              "bbox_area": 93101.9390630722,
+              "class_id": 73
+            },
+            {
+              "label": "book",
+              "conf": 0.2991865873336792,
+              "bbox": [
+                650.3131713867188,
+                2461.34912109375,
+                991.2537231445312,
+                2708.74072265625
+              ],
+              "bbox_area": 84345.82913696766,
+              "class_id": 73
+            },
+            {
+              "label": "book",
+              "conf": 0.2268238365650177,
+              "bbox": [
+                1215.3890380859375,
+                2419.1201171875,
+                1614.605712890625,
+                2687.52490234375
+              ],
+              "bbox_area": 107151.66583174467,
+              "class_id": 73
+            },
+            {
+              "label": "book",
+              "conf": 0.21284590661525726,
+              "bbox": [
+                1523.879150390625,
+                2428.44970703125,
+                1922.279296875,
+                2677.618896484375
+              ],
+              "bbox_area": 99269.04157751799,
+              "class_id": 73
+            }
+          ],
+          "unique_labels": [
+            "book",
+            "suitcase"
+          ]
+        },
+        {
+          "frame": "frame_00002.jpg",
+          "frame_index": 2,
+          "objects": [
+            {
+              "label": "suitcase",
+              "conf": 0.9539098739624023,
+              "bbox": [
+                146.7000732421875,
+                1184.4114990234375,
+                2156.87060546875,
+                3076.30078125
+              ],
+              "bbox_area": 3803020.0853670985,
+              "class_id": 28
+            },
+            {
+              "label": "suitcase",
+              "conf": 0.292971670627594,
+              "bbox": [
+                3.4954833984375,
+                2990.073974609375,
+                2152.015380859375,
+                3837.62109375
+              ],
+              "bbox_area": 1820971.8495093286,
+              "class_id": 28
+            }
+          ],
+          "unique_labels": [
+            "suitcase"
+          ]
+        },
+        {
+          "frame": "frame_00003.jpg",
+          "frame_index": 3,
+          "objects": [
+            {
+              "label": "suitcase",
+              "conf": 0.9641892910003662,
+              "bbox": [
+                353.69366455078125,
+                1196.103515625,
+                2159.423095703125,
+                3034.30078125
+              ],
+              "bbox_area": 3319286.902802825,
+              "class_id": 28
+            },
+            {
+              "label": "suitcase",
+              "conf": 0.46115466952323914,
+              "bbox": [
+                6.662109375,
+                2928.3955078125,
+                2148.542236328125,
+                3836.56201171875
+              ],
+              "bbox_area": 1945183.7866812944,
+              "class_id": 28
+            }
+          ],
+          "unique_labels": [
+            "suitcase"
+          ]
+        }
+      ]
+    },
+    "actions_summary": {
+      "total_clips": 1,
+      "clips": [
+        {
+          "clip_index": 0,
+          "clip_type": "middle",
+          "clip_position": 0.5,
+          "frame_range": {
+            "start": 0,
+            "end": 43,
+            "total_frames": 43
+          },
+          "num_frames_analyzed": 43,
+          "top_actions": [
+            {
+              "label": "land sailing",
+              "prob": 0.026390524581074715,
+              "index": 251,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "welding",
+              "prob": 0.02534624934196472,
+              "index": 588,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "using remote controller (not gaming)",
+              "prob": 0.021550491452217102,
+              "index": 563,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "bobsledding",
+              "prob": 0.02090427279472351,
+              "index": 39,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "dunking basketball",
+              "prob": 0.02086411975324154,
+              "index": 155,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "snowmobiling",
+              "prob": 0.020534271374344826,
+              "index": 485,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "surfing crowd",
+              "prob": 0.017460739240050316,
+              "index": 501,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "falling off bike",
+              "prob": 0.017128759995102882,
+              "index": 172,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "sled dog racing",
+              "prob": 0.0156504288315773,
+              "index": 473,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "ice skating",
+              "prob": 0.015402587130665779,
+              "index": 227,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "docking boat",
+              "prob": 0.013669517822563648,
+              "index": 140,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "sailing",
+              "prob": 0.013460608199238777,
+              "index": 428,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "robot dancing",
+              "prob": 0.013166951015591621,
+              "index": 421,
+              "is_crime_relevant": true,
+              "confidence_boost": true
+            },
+            {
+              "label": "playing ice hockey",
+              "prob": 0.0127782691270113,
+              "index": 349,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "coloring in",
+              "prob": 0.012709353119134903,
+              "index": 103,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "playing controller",
+              "prob": 0.012410469353199005,
+              "index": 335,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "motorcycling",
+              "prob": 0.012359865941107273,
+              "index": 292,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "drawing",
+              "prob": 0.01212551910430193,
+              "index": 146,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            },
+            {
+              "label": "shooting goal (soccer)",
+              "prob": 0.01168375089764595,
+              "index": 451,
+              "is_crime_relevant": true,
+              "confidence_boost": true
+            },
+            {
+              "label": "skiing crosscountry",
+              "prob": 0.010905872099101543,
+              "index": 465,
+              "is_crime_relevant": false,
+              "confidence_boost": false
+            }
+          ],
+          "highest_confidence": 0.026390524581074715
+        }
+      ]
+    },
+    "motion_analysis": {
+      "analyzed": true,
+      "average_motion": 52.670572916666664,
+      "max_motion": 93.74088541666666,
+      "motion_variance": 751.3724254628337,
+      "motion_pattern": {
+        "category": "chaotic_high_motion",
+        "description": "High chaotic motion with multiple sudden movements (possible chase, fight, panic)",
+        "crime_relevance": "high",
+        "confidence": 0.85
+      },
+      "sudden_movements": [
+        {
+          "frame_index": 2,
+          "motion_intensity": 62.927083333333336,
+          "timestamp": "2s"
+        },
+        {
+          "frame_index": 5,
+          "motion_intensity": 66.42447916666666,
+          "timestamp": "5s"
+        },
+        {
+          "frame_index": 6,
+          "motion_intensity": 59.2734375,
+          "timestamp": "6s"
+        },
+        {
+          "frame_index": 7,
+          "motion_intensity": 73.81510416666667,
+          "timestamp": "7s"
+        },
+        {
+          "frame_index": 12,
+          "motion_intensity": 82.44791666666667,
+          "timestamp": "12s"
+        },
+        {
+          "frame_index": 17,
+          "motion_intensity": 88.00130208333333,
+          "timestamp": "17s"
+        },
+        {
+          "frame_index": 20,
+          "motion_intensity": 93.74088541666666,
+          "timestamp": "20s"
+        },
+        {
+          "frame_index": 21,
+          "motion_intensity": 93.37760416666666,
+          "timestamp": "21s"
+        },
+        {
+          "frame_index": 22,
+          "motion_intensity": 83.66796875,
+          "timestamp": "22s"
+        },
+        {
+          "frame_index": 25,
+          "motion_intensity": 86.50260416666666,
+          "timestamp": "25s"
+        },
+        {
+          "frame_index": 26,
+          "motion_intensity": 84.76953125,
+          "timestamp": "26s"
+        },
+        {
+          "frame_index": 27,
+          "motion_intensity": 83.98046875,
+          "timestamp": "27s"
+        },
+        {
+          "frame_index": 29,
+          "motion_intensity": 79.45572916666667,
+          "timestamp": "29s"
+        },
+        {
+          "frame_index": 31,
+          "motion_intensity": 79.71744791666666,
+          "timestamp": "31s"
+        },
+        {
+          "frame_index": 32,
+          "motion_intensity": 86.33463541666667,
+          "timestamp": "32s"
+        },
+        {
+          "frame_index": 34,
+          "motion_intensity": 59.619791666666664,
+          "timestamp": "34s"
+        },
+        {
+          "frame_index": 36,
+          "motion_intensity": 70.13020833333333,
+          "timestamp": "36s"
+        },
+        {
+          "frame_index": 37,
+          "motion_intensity": 87.94270833333333,
+          "timestamp": "37s"
+        },
+        {
+          "frame_index": 41,
+          "motion_intensity": 69.99739583333333,
+          "timestamp": "41s"
+        },
+        {
+          "frame_index": 42,
+          "motion_intensity": 87.74088541666667,
+          "timestamp": "42s"
+        }
+      ],
+      "chase_sequences": [
+        {
+          "start_frame": 1,
+          "duration_frames": 8,
+          "avg_intensity": 53.34342447916667,
+          "description": "High-motion sequence suggesting chase or rapid movement"
+        },
+        {
+          "start_frame": 19,
+          "duration_frames": 4,
+          "avg_intensity": 79.43619791666666,
+          "description": "High-motion sequence suggesting chase or rapid movement"
+        },
+        {
+          "start_frame": 24,
+          "duration_frames": 3,
+          "avg_intensity": 85.08420138888889,
+          "description": "High-motion sequence suggesting chase or rapid movement"
+        },
+        {
+          "start_frame": 30,
+          "duration_frames": 7,
+          "avg_intensity": 65.25334821428571,
+          "description": "High-motion sequence suggesting chase or rapid movement"
+        },
+        {
+          "start_frame": 39,
+          "duration_frames": 3,
+          "avg_intensity": 67.796875,
+          "description": "High-motion sequence suggesting chase or rapid movement"
+        }
+      ],
+      "frames_analyzed": 42
+    },
+    "events": [
+      {
+        "type": "weapon_like_object_detected",
+        "frame": "frame_00042.jpg",
+        "frame_index": 42,
+        "confidence": 0.7,
+        "severity": "high",
+        "source": "object_detection",
+        "details": {
+          "weapon_labels": [
+            "scissors"
+          ],
+          "counts": {
+            "scissors": 1
+          },
+          "persons_present": 0
+        }
+      },
+      {
+        "type": "weapon_detected",
+        "confidence": 0.75,
+        "severity": "critical",
+        "source": "temporal_analysis",
+        "details": {
+          "frames_with_weapon": 1,
+          "total_frames": 43,
+          "persistence_ratio": 0.023255813953488372
+        }
+      },
+      {
+        "type": "possible_weapon_incident",
+        "source": "action_recognition",
+        "confidence": 0.01168375089764595,
+        "severity": "high",
+        "details": {
+          "label": "shooting goal (soccer)",
+          "prob": 0.01168375089764595,
+          "clip_index": 0,
+          "clip_type": "middle",
+          "is_crime_relevant": true
+        }
+      }
+    ],
+    "crime_report": {
+      "overall_severity": "critical",
+      "crime_detected": true,
+      "crime_indicators": [
+        {
+          "type": "weapon_threat",
+          "severity": "critical",
+          "confidence": 0.9
+        },
+        {
+          "type": "theft_or_robbery",
+          "severity": "medium",
+          "confidence": 0.487900170609355
+        }
+      ],
+      "weapon_threat_analysis": {
+        "detected": true,
+        "threat_level": "critical",
+        "weapon_frames": [
+          {
+            "frame_index": 35,
+            "frame_name": "frame_00035.jpg",
+            "weapon_count": 1,
+            "person_count": 0,
+            "weapons": [
+              {
+                "type": "bottle",
+                "confidence": 0.17474165558815002
+              }
+            ]
+          },
+          {
+            "frame_index": 42,
+            "frame_name": "frame_00042.jpg",
+            "weapon_count": 2,
+            "person_count": 0,
+            "weapons": [
+              {
+                "type": "scissors",
+                "confidence": 0.14295966923236847
+              },
+              {
+                "type": "bottle",
+                "confidence": 0.1397184282541275
+              }
+            ]
+          }
+        ],
+        "proximity_alerts": [],
+        "weapon_actions": [
+          {
+            "action": "shooting goal (soccer)",
+            "confidence": 0.01168375089764595,
+            "clip_index": 0,
+            "clip_type": "middle"
+          }
+        ],
+        "assessment": "CRITICAL: Weapon detected in close proximity to persons. Immediate threat to safety."
+      },
+      "violence_analysis": {
+        "detected": false,
+        "violence_score": 0.0,
+        "intensity_level": "low",
+        "violent_actions": [],
+        "multi_person_frame_ratio": 0.0,
+        "assessment": "Low or no violence detected."
+      },
+      "theft_analysis": {
+        "detected": true,
+        "theft_probability": 0.487900170609355,
+        "valuable_disappearances": [
+          {
+            "item": "suitcase",
+            "first_seen": 0,
+            "last_seen": 5,
+            "duration_ratio": 0.11627906976744186,
+            "suspicion_score": 0.8
+          }
+        ],
+        "theft_actions": [
+          {
+            "action": "robot dancing",
+            "confidence": 0.013166951015591621,
+            "clip_index": 0
+          }
+        ],
+        "assessment": "MODERATE theft risk: Suspicious patterns detected."
+      },
+      "suspicious_behavior_analysis": {
+        "detected": false,
+        "suspicion_score": 0.0,
+        "patterns": [],
+        "assessment": "No suspicious behavior detected."
+      },
+      "recommendation": "\u26a0\ufe0f CRITICAL ALERT: Immediate danger detected. Call emergency services (911/112) immediately. Do NOT intervene directly. Evacuate to safe location."
+    }
+  },
+  "gemini_output": {
+    "description": "Automated analysis has detected potential criminal activity with critical severity. 2 crime indicators were identified through multi-modal AI analysis. This includes object detection, action recognition, and behavioral pattern analysis.",
+    "crime_detected": true,
+    "crime_type": "weapon_threat",
+    "severity": "critical",
+    "evidence": [
+      "Weapon detected in video",
+      "Theft patterns detected with 49% probability"
+    ],
+    "safety_recommendations": [
+      "\u26a0\ufe0f IMMEDIATE ACTION REQUIRED",
+      "Call emergency services (911/112) immediately",
+      "Do NOT intervene directly - maintain safe distance",
+      "Evacuate to a secure location if nearby",
+      "Preserve any evidence and provide video to authorities"
+    ],
+    "ipc_suggestions": [
+      {
+        "section": "IPC 307",
+        "reason": "Attempt to murder (if weapon used against person)"
+      },
+      {
+        "section": "IPC 506",
+        "reason": "Criminal intimidation with weapon"
+      },
+      {
+        "section": "IPC 379",
+        "reason": "Theft"
+      },
+      {
+        "section": "IPC 392",
+        "reason": "Robbery"
+      }
+    ],
+    "disclaimer": "This analysis is generated by automated AI systems (YOLOv8x, MoViNet A2, and specialized crime pattern analyzers). While these systems are highly accurate, this is not definitive proof of criminal activity and should not replace human judgment or legal proceedings. Always consult law enforcement and legal professionals for official assessments."
+  },
+  "crime_analysis": {
+    "severity": "critical",
+    "crime_detected": true,
+    "indicators": [
+      {
+        "type": "weapon_threat",
+        "severity": "critical",
+        "confidence": 0.9
+      },
+      {
+        "type": "theft_or_robbery",
+        "severity": "medium",
+        "confidence": 0.487900170609355
+      }
+    ],
+    "recommendation": "\u26a0\ufe0f CRITICAL ALERT: Immediate danger detected. Call emergency services (911/112) immediately. Do NOT intervene directly. Evacuate to safe location.",
+    "detailed_analyses": {
+      "weapon_threat": {
+        "detected": true,
+        "threat_level": "critical",
+        "weapon_frames": [
+          {
+            "frame_index": 35,
+            "frame_name": "frame_00035.jpg",
+            "weapon_count": 1,
+            "person_count": 0,
+            "weapons": [
+              {
+                "type": "bottle",
+                "confidence": 0.17474165558815002
+              }
+            ]
+          },
+          {
+            "frame_index": 42,
+            "frame_name": "frame_00042.jpg",
+            "weapon_count": 2,
+            "person_count": 0,
+            "weapons": [
+              {
+                "type": "scissors",
+                "confidence": 0.14295966923236847
+              },
+              {
+                "type": "bottle",
+                "confidence": 0.1397184282541275
+              }
+            ]
+          }
+        ],
+        "proximity_alerts": [],
+        "weapon_actions": [
+          {
+            "action": "shooting goal (soccer)",
+            "confidence": 0.01168375089764595,
+            "clip_index": 0,
+            "clip_type": "middle"
+          }
+        ],
+        "assessment": "CRITICAL: Weapon detected in close proximity to persons. Immediate threat to safety."
+      },
+      "violence": {
+        "detected": false,
+        "violence_score": 0.0,
+        "intensity_level": "low",
+        "violent_actions": [],
+        "multi_person_frame_ratio": 0.0,
+        "assessment": "Low or no violence detected."
+      },
+      "theft": {
+        "detected": true,
+        "theft_probability": 0.487900170609355,
+        "valuable_disappearances": [
+          {
+            "item": "suitcase",
+            "first_seen": 0,
+            "last_seen": 5,
+            "duration_ratio": 0.11627906976744186,
+            "suspicion_score": 0.8
+          }
+        ],
+        "theft_actions": [
+          {
+            "action": "robot dancing",
+            "confidence": 0.013166951015591621,
+            "clip_index": 0
+          }
+        ],
+        "assessment": "MODERATE theft risk: Suspicious patterns detected."
+      },
+      "suspicious_behavior": {
+        "detected": false,
+        "suspicion_score": 0.0,
+        "patterns": [],
+        "assessment": "No suspicious behavior detected."
+      },
+      "motion_patterns": {
+        "analyzed": true,
+        "average_motion": 52.670572916666664,
+        "max_motion": 93.74088541666666,
+        "motion_variance": 751.3724254628337,
+        "motion_pattern": {
+          "category": "chaotic_high_motion",
+          "description": "High chaotic motion with multiple sudden movements (possible chase, fight, panic)",
+          "crime_relevance": "high",
+          "confidence": 0.85
+        },
+        "sudden_movements": [
+          {
+            "frame_index": 2,
+            "motion_intensity": 62.927083333333336,
+            "timestamp": "2s"
+          },
+          {
+            "frame_index": 5,
+            "motion_intensity": 66.42447916666666,
+            "timestamp": "5s"
+          },
+          {
+            "frame_index": 6,
+            "motion_intensity": 59.2734375,
+            "timestamp": "6s"
+          },
+          {
+            "frame_index": 7,
+            "motion_intensity": 73.81510416666667,
+            "timestamp": "7s"
+          },
+          {
+            "frame_index": 12,
+            "motion_intensity": 82.44791666666667,
+            "timestamp": "12s"
+          },
+          {
+            "frame_index": 17,
+            "motion_intensity": 88.00130208333333,
+            "timestamp": "17s"
+          },
+          {
+            "frame_index": 20,
+            "motion_intensity": 93.74088541666666,
+            "timestamp": "20s"
+          },
+          {
+            "frame_index": 21,
+            "motion_intensity": 93.37760416666666,
+            "timestamp": "21s"
+          },
+          {
+            "frame_index": 22,
+            "motion_intensity": 83.66796875,
+            "timestamp": "22s"
+          },
+          {
+            "frame_index": 25,
+            "motion_intensity": 86.50260416666666,
+            "timestamp": "25s"
+          },
+          {
+            "frame_index": 26,
+            "motion_intensity": 84.76953125,
+            "timestamp": "26s"
+          },
+          {
+            "frame_index": 27,
+            "motion_intensity": 83.98046875,
+            "timestamp": "27s"
+          },
+          {
+            "frame_index": 29,
+            "motion_intensity": 79.45572916666667,
+            "timestamp": "29s"
+          },
+          {
+            "frame_index": 31,
+            "motion_intensity": 79.71744791666666,
+            "timestamp": "31s"
+          },
+          {
+            "frame_index": 32,
+            "motion_intensity": 86.33463541666667,
+            "timestamp": "32s"
+          },
+          {
+            "frame_index": 34,
+            "motion_intensity": 59.619791666666664,
+            "timestamp": "34s"
+          },
+          {
+            "frame_index": 36,
+            "motion_intensity": 70.13020833333333,
+            "timestamp": "36s"
+          },
+          {
+            "frame_index": 37,
+            "motion_intensity": 87.94270833333333,
+            "timestamp": "37s"
+          },
+          {
+            "frame_index": 41,
+            "motion_intensity": 69.99739583333333,
+            "timestamp": "41s"
+          },
+          {
+            "frame_index": 42,
+            "motion_intensity": 87.74088541666667,
+            "timestamp": "42s"
+          }
+        ],
+        "chase_sequences": [
+          {
+            "start_frame": 1,
+            "duration_frames": 8,
+            "avg_intensity": 53.34342447916667,
+            "description": "High-motion sequence suggesting chase or rapid movement"
+          },
+          {
+            "start_frame": 19,
+            "duration_frames": 4,
+            "avg_intensity": 79.43619791666666,
+            "description": "High-motion sequence suggesting chase or rapid movement"
+          },
+          {
+            "start_frame": 24,
+            "duration_frames": 3,
+            "avg_intensity": 85.08420138888889,
+            "description": "High-motion sequence suggesting chase or rapid movement"
+          },
+          {
+            "start_frame": 30,
+            "duration_frames": 7,
+            "avg_intensity": 65.25334821428571,
+            "description": "High-motion sequence suggesting chase or rapid movement"
+          },
+          {
+            "start_frame": 39,
+            "duration_frames": 3,
+            "avg_intensity": 67.796875,
+            "description": "High-motion sequence suggesting chase or rapid movement"
+          }
+        ],
+        "frames_analyzed": 42
+      }
+    }
+  },
+  "metadata": {
+    "analysis_version": "2.0_enhanced",
+    "models_used": [
+      "YOLOv8x",
+      "MoViNet-A2",
+      "CrimePatternAnalyzer",
+      "MotionAnalyzer"
+    ],
+    "fps": 3
+  }
+}
