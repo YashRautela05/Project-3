@@ -6,13 +6,13 @@
     "detections_summary": {
       "total_frames": 47,
       "unique_objects": [
+        "cell phone",
+        "baseball glove",
         "skateboard",
         "handbag",
         "person",
-        "cell phone",
-        "baseball glove",
-        "bottle",
-        "pizza"
+        "pizza",
+        "bottle"
       ],
       "sample_detections": [
         {
@@ -297,8 +297,8 @@
             }
           ],
           "unique_labels": [
-            "skateboard",
             "person",
+            "skateboard",
             "cell phone"
           ]
         }
@@ -785,32 +785,78 @@
     }
   },
   "gemini_output": {
-    "description": "Automated analysis has detected potential criminal activity with critical severity. 1 crime indicators were identified through multi-modal AI analysis. This includes object detection, action recognition, and behavioral pattern analysis.",
+    "description": "Automated surveillance detected a critical weapon threat where a weapon was identified in close proximity to individuals, posing an immediate and severe risk to safety. Although direct violence was assessed as low or not clearly detected, the presence of a weapon necessitates urgent action due to the potential for escalation. Additionally, possible loitering behavior was observed, indicating a potentially unfolding dangerous situation.",
     "crime_detected": true,
     "crime_type": "weapon_threat",
     "severity": "critical",
-    "evidence": [
-      "Weapon detected in video",
-      "Violent actions detected with moderate intensity"
+    "confidence_level": "very_high",
+    "evidence_summary": [
+      "Critical severity weapon threat detected with 0.90 confidence.",
+      "Weapon identified in close proximity to persons, posing an immediate threat.",
+      "Weapon detected across 2 video frames with 1 proximity alert.",
+      "Low or no overt violence detected, despite a 'MODERATE' intensity level.",
+      "Possible loitering behavior identified among motion patterns."
     ],
     "safety_recommendations": [
-      "\u26a0\ufe0f IMMEDIATE ACTION REQUIRED",
-      "Call emergency services (911/112) immediately",
-      "Do NOT intervene directly - maintain safe distance",
-      "Evacuate to a secure location if nearby",
-      "Preserve any evidence and provide video to authorities"
+      "Immediately contact emergency services (Police/112/911) with precise details.",
+      "Do NOT approach, confront, or attempt to intervene with the armed individual.",
+      "If safe to do so, discreetly evacuate the area and move to a secure location.",
+      "Seek immediate cover or concealment to minimize exposure to potential danger.",
+      "Alert others in the vicinity to the threat, guiding them to safety without causing panic.",
+      "Cooperate fully with law enforcement upon their arrival, providing any requested information."
     ],
-    "ipc_suggestions": [
-      {
-        "section": "IPC 307",
-        "reason": "Attempt to murder (if weapon used against person)"
-      },
-      {
-        "section": "IPC 506",
-        "reason": "Criminal intimidation with weapon"
-      }
+    "legal_information": {
+      "ipc_sections": [
+        {
+          "section": "IPC 351/352",
+          "offense": "Assault / Punishment for Assault",
+          "punishment": "Imprisonment for up to 3 months, or fine up to 500 rupees, or both (for making a gesture or preparation causing apprehension of criminal force)."
+        },
+        {
+          "section": "IPC 506",
+          "offense": "Criminal Intimidation",
+          "punishment": "Imprisonment of either description for a term which may extend to two years, or with fine, or with both (for threatening injury to person, reputation or property)."
+        },
+        {
+          "section": "Arms Act, 1959, Section 25",
+          "offense": "Possessing/Carrying Prohibited Arms Illegally",
+          "punishment": "Punishment varies significantly based on specific sub-section and type of weapon, ranging from imprisonment for a term of not less than three years which may extend to seven years, to life imprisonment."
+        }
+      ],
+      "possible_punishment": "Individuals involved may face imprisonment ranging from 3 months up to 2 years under IPC sections for assault and criminal intimidation. Additionally, charges under the Arms Act, 1959 for illegal possession or carrying of a weapon could lead to much more severe penalties, including imprisonment from 3 years up to life, depending on the nature of the weapon and intent.",
+      "severity_factors": [
+        "The weapon's proximity to persons increases the threat level.",
+        "The type of weapon involved (e.g., firearm vs. bladed weapon).",
+        "The intent of the individual carrying the weapon.",
+        "The number of people endangered by the threat.",
+        "Whether the weapon is legally possessed or prohibited.",
+        "Any prior criminal record or history of violence by the individual."
+      ]
+    },
+    "how_to_stay_safe": [
+      "Maintain high situational awareness of your surroundings at all times.",
+      "Trust your instincts; if a situation feels unsafe, disengage and leave.",
+      "Avoid engaging in arguments or confrontations with unknown individuals.",
+      "Identify potential escape routes and safe zones in any public space.",
+      "Do not display valuables openly that could attract attention.",
+      "Report any suspicious persons or activities to authorities immediately, even if minor.",
+      "Familiarize yourself with 'Run, Hide, Fight' principles for active threat situations.",
+      "Walk with purpose and project confidence; avoid distractions like excessive phone use."
     ],
-    "disclaimer": "This analysis is generated by automated AI systems (YOLOv8x, MoViNet A2, and specialized crime pattern analyzers). While these systems are highly accurate, this is not definitive proof of criminal activity and should not replace human judgment or legal proceedings. Always consult law enforcement and legal professionals for official assessments."
+    "immediate_actions": [
+      "Call emergency services (e.g., 112 in India) without delay, stating 'armed person' or 'weapon threat'.",
+      "Prioritize personal safety: run to safety if a clear exit is available, or hide if escape is impossible.",
+      "If hiding, turn off lights, silence your phone, and remain absolutely quiet.",
+      "Do NOT attempt to disarm or negotiate with the armed individual.",
+      "Provide a clear, calm description of the individual, weapon, location, and any observed actions to emergency responders."
+    ],
+    "reporting_guidance": {
+      "should_report": true,
+      "urgency": "immediate",
+      "who_to_contact": "Police / Emergency Services (e.g., 112 in India)",
+      "what_to_report": "The exact location of the incident, a description of the armed individual(s), the type of weapon observed, the number of people potentially endangered, and any observed suspicious actions like loitering. Mention the immediate threat to safety."
+    },
+    "disclaimer": "This analysis is generated by an automated system based on detected patterns and may not capture the full context or intent. It serves as an alert and guide for further human investigation and action. Legal interpretations and actual punishment are subject to judicial discretion and specific circumstances of the case."
   },
   "crime_analysis": {
     "severity": "critical",

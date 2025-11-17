@@ -305,7 +305,7 @@ def call_gemini(summary: Dict[str, Any]) -> Dict[str, Any]:
         
         # Configure Gemini
         genai.configure(api_key=GOOGLE_API_KEY)
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Extract key information
         crime_report = summary.get("crime_report", {})

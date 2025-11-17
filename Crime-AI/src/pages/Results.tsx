@@ -1,189 +1,140 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Upload as UploadIcon, 
-  Shield, 
-  AlertTriangle, 
-  Users, 
-  Clock,
-  TrendingUp
+  ArrowLeft,
+  Loader2,
+  AlertTriangle
 } from 'lucide-react';
+import axios from 'axios';
+import { toast } from 'react-hot-toast';
+import ResultsDisplay from '../components/ResultsDisplay';
 
-const Dashboard: React.FC = () => {
-  const stats = [
-    { label: 'Videos Analyzed', value: '156', icon: Users, color: 'text-blue-600' },
-    { label: 'Crimes Detected', value: '23', icon: AlertTriangle, color: 'text-red-600' },
-    { label: 'Safety Alerts', value: '8', icon: Shield, color: 'text-green-600' },
-    { label: 'Processing Time', value: '45s', icon: Clock, color: 'text-purple-600' },
-  ];
+interface AnalysisResult {
+  task_id: string;
+  status: string;
+  result: any;
+}
 
-  const features = [
-    {
-      title: 'AI-Powered Analysis',
-      description: 'Advanced machine learning models analyze audio and visual content for criminal activity detection.',
-      icon: TrendingUp,
-      color: 'bg-blue-500',
-    },
-    {
-      title: 'Real-time Processing',
-      description: 'Upload videos and get instant crime analysis with safety recommendations.',
-      icon: Clock,
-      color: 'bg-green-500',
-    },
-    {
-      title: 'Safety First',
-      description: 'Immediate safety alerts and emergency procedures for witnesses.',
-      icon: Shield,
-      color: 'bg-red-500',
-    },
-    {
-      title: 'Multi-modal Detection',
-      description: 'Combines audio transcription, object detection, and behavioral analysis.',
-      icon: Users,
-      color: 'bg-purple-500',
-    },
-  ];
+const Results: React.FC = () => {
+  const { taskId } = useParams<{ taskId: string }>();
+  const navigate = useNavigate();
+  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const quickActions = [
-    {
-      title: 'Upload Video',
-      description: 'Analyze a video for criminal activity',
-      icon: UploadIcon,
-      link: '/upload',
-      color: 'bg-primary-600 hover:bg-primary-700',
-    },
-    {
-      title: 'Safety Tips',
-      description: 'Learn crime prevention strategies',
-      icon: Shield,
-      link: '#',
-      color: 'bg-green-600 hover:bg-green-700',
-    },
-    {
-      title: 'Emergency Contacts',
-      description: 'Quick access to emergency numbers',
-      icon: AlertTriangle,
-      link: '#',
-      color: 'bg-red-600 hover:bg-red-700',
-    },
-  ];
+  useEffect(() => {
+    const fetchResults = async () => {
+      if (!taskId) {
+        setError('No task ID provided');
+        setLoading(false);
+        return;
+      }
 
-  return (
-    <div className="space-y-8">
-      {/* Hero Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center"
-      >
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Crime-AI Detection System
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Advanced AI-powered crime detection with real-time analysis and safety recommendations.
-          Protect your community with intelligent surveillance technology.
-        </p>
-      </motion.div>
+      try {
+        const response = await axios.get(`http://localhost:8000/status/${taskId}`);
+        console.log('API Response:', response.data);
+        
+        if (response.data.status === 'done') {
+          console.log('Analysis complete, setting result:', response.data);
+          setAnalysisResult(response.data);
+          setLoading(false);
+        } else if (response.data.status === 'FAILURE') {
+          setError('Analysis failed. Please try again.');
+          setLoading(false);
+          toast.error('Analysis failed');
+        } else {
+          // Still processing, poll again
+          setTimeout(fetchResults, 3000);
+        }
+      } catch (err) {
+        console.error('Error fetching results:', err);
+        setError('Failed to load results. Please try again.');
+        setLoading(false);
+        toast.error('Failed to load results');
+      }
+    };
 
-      {/* Stats */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-      >
-        {stats.map((stat, index) => {
-          const Icon = stat.icon;
-          return (
-            <div key={index} className="card">
-              <div className="flex items-center space-x-3">
-                <Icon className={`h-8 w-8 ${stat.color}`} />
-                <div>
-                  <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                  <p className="text-sm text-gray-600">{stat.label}</p>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </motion.div>
+    fetchResults();
+  }, [taskId]);
 
-      {/* Quick Actions */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
-      >
-        {quickActions.map((action, index) => {
-          const Icon = action.icon;
-          return (
-            <Link
-              key={index}
-              to={action.link}
-              className="card hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1"
-            >
-              <div className="flex items-center space-x-4">
-                <div className={`p-3 rounded-lg ${action.color} text-white`}>
-                  <Icon className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">{action.title}</h3>
-                  <p className="text-sm text-gray-600">{action.description}</p>
-                </div>
-              </div>
-            </Link>
-          );
-        })}
-      </motion.div>
+  const handleBackToUpload = () => {
+    navigate('/upload');
+  };
 
-      {/* Features */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
-      >
-        {features.map((feature, index) => {
-          const Icon = feature.icon;
-          return (
-            <div key={index} className="card">
-              <div className="flex items-start space-x-4">
-                <div className={`p-3 rounded-lg ${feature.color} text-white`}>
-                  <Icon className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </motion.div>
+  // Loading state
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-4">
+        <Loader2 className="h-12 w-12 text-primary-600 animate-spin" />
+        <h2 className="text-2xl font-semibold text-gray-900">Loading Analysis Results...</h2>
+        <p className="text-gray-600">Please wait while we fetch your analysis data.</p>
+      </div>
+    );
+  }
 
-      {/* CTA Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
-        className="card bg-gradient-to-r from-primary-600 to-primary-700 text-white text-center"
-      >
-        <h2 className="text-2xl font-bold mb-4">Ready to Analyze?</h2>
-        <p className="text-primary-100 mb-6">
-          Upload a video file and get instant AI-powered crime detection analysis.
-        </p>
-        <Link
-          to="/upload"
-          className="btn-secondary bg-white text-primary-700 hover:bg-gray-100"
+  // Error state
+  if (error) {
+    return (
+      <div className="max-w-2xl mx-auto text-center space-y-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="card bg-red-50 border-2 border-red-300"
         >
-          <UploadIcon className="h-5 w-5 mr-2" />
-          Upload Video
-        </Link>
-      </motion.div>
+          <AlertTriangle className="h-16 w-16 text-red-600 mx-auto mb-4" />
+          <h2 className="text-2xl font-bold text-red-900 mb-2">Error Loading Results</h2>
+          <p className="text-red-700 mb-6">{error}</p>
+          <button
+            onClick={handleBackToUpload}
+            className="btn-primary flex items-center space-x-2 mx-auto"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span>Back to Upload</span>
+          </button>
+        </motion.div>
+      </div>
+    );
+  }
+
+  // Results display
+  if (analysisResult && analysisResult.status === 'done') {
+    return (
+      <div className="space-y-6">
+        {/* Header with back button */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex items-center justify-between"
+        >
+          <h1 className="text-3xl font-bold text-gray-900">Analysis Results</h1>
+          <button
+            onClick={handleBackToUpload}
+            className="btn-secondary flex items-center space-x-2"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span>New Analysis</span>
+          </button>
+        </motion.div>
+
+        {/* Results Display Component */}
+        <ResultsDisplay data={analysisResult} />
+      </div>
+    );
+  }
+
+  // Fallback
+  return (
+    <div className="text-center">
+      <p className="text-gray-600">No results available.</p>
+      <button
+        onClick={handleBackToUpload}
+        className="btn-primary mt-4"
+      >
+        Back to Upload
+      </button>
     </div>
   );
 };
 
-export default Dashboard;
+export default Results;
